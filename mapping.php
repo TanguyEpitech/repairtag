@@ -148,8 +148,8 @@ var tab = [];
 
 let inputs = $("input");
 $.ajax({
-    url: 'data.json',
-    type: 'POST',
+    url: 'data.php',
+    type: 'GET',
     
     success: function(response) {
         
