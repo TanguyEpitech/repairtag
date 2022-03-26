@@ -1,8 +1,10 @@
 .contenu {
 margin : 0 auto; 
-width : 40%;
+width : 428px;
 background : #d8f1db ;
-padding-bottom : 300px ; }
+padding-bottom : 300px ;
+font-family : poppins-medium;
+}
 
 
 .radios {
@@ -29,26 +31,28 @@ text-align :center ;
 }
 
 h1 {
-text-align : center ; 
+text-align : center ;
+font-size : 69px ;
 color : #199b53;
 font-family : anton;
 padding : 3px;
 }
 h2 {
 margin-top : 20px ;
+font-size : 36px ;
 text-align : center ; 
 font-family : anton;
 padding : 3px;
 }
 h3 {
 text-align : center ; 
-font-family : poppins;
+font-family : poppins-medium;
 padding : 3px;
 }
 
 p {
 text-align : center ; 
-font-family : poppins;
+font-family : poppins-medium;
 padding : 3px;
 }
 
@@ -59,11 +63,10 @@ padding-top : 140px ;}
 
 
 .btn{
-width : 100%;
+width : 179px;
 margin-bottom : 10px;
 color : #ffffff ;
 border-radius : 20px ; 
-border-color : #199b53;
 background : #75d481; 
 }
 

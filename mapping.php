@@ -24,7 +24,10 @@ crossorigin=""></script>
 
 <style>
 
-#map { height: 300px; }
+
+
+
+#map { height: 100%; margin-top: -300px; }
 
 .radios {
     display: grid;
@@ -32,13 +35,13 @@ crossorigin=""></script>
 }
 
 .monform {
+    position: relative;
+    z-index: 9999;
     padding: 50px;
     border: none !important;
-    border-radius: 30px;
 }
 
-.form { margin-top: 20vh !important;
-    max-width: 500px;
+.form {
     margin: auto;
     margin-bottom: 20px;
 }
@@ -52,6 +55,11 @@ crossorigin=""></script>
     display: none !important;
 }
 
+body {
+    color: #167544;
+
+    background: #d8f1db;
+}
 
 </style>
 
@@ -59,11 +67,8 @@ crossorigin=""></script>
 <?php 
 
 
-print_r($_GET);
 
 
-
-$_GET["p"];
 
 ?>
 
@@ -76,12 +81,16 @@ $_GET["p"];
 
 </div>
 
-<h2 class="p-3"> votre professionel adapté</h2>
 
 
 <form>
 <div class="form" methode="GET" action="">
 <div class="card shadow  monform">
+<h2 class=""> votre professionel adapté</h2>
+
+
+
+
 <label class="form-label" for="">Quel objet avez vous besoin de réparer ?</label>
 
 <select name="objet" id="selection">
@@ -91,8 +100,9 @@ $_GET["p"];
 </select>
 
 <br>
-<button id="button-form" type="submit"  class="btn btn-primary ">Valider</button>
+<button id="button-form" type="submit"  class="btn btn-primary  m-2 ">Valider</button>
 </form> 
+<button id="button-form" type="submit"  class="btn btn-Warning m-2">demmander un devis </button>
 
 </div>
 
@@ -110,7 +120,6 @@ $_GET["p"];
 <div id="paramobjet"> <?php echo $_GET["objet"]; ?></div>
 
 <div id="map"></div>
-
 
 
 <script>
@@ -173,7 +182,8 @@ function maping (param2 = "") {
             if((tab[s].Type && tab[s].Type == param) || tab[s].Activités.includes(paramobjet)) {
                 console.log('true', );
                 L.marker([tab[s].latitude, tab[s].longitude]).addTo(map)
-                .bindPopup(tab[s].Nom) 
+                .bindPopup(tab[s].Nom + "<br>" + tab[s].Activités+ "<br>" + tab[s].Contact) 
+
                 .openPopup();   
                                 
             }
