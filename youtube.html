@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
 <script>
 // ma clé, remplace-la avec la tienne
 const api_key = 'AIzaSyBb3PC5BCIQzYjCNoMqDrc0R0M84hoPNng';
@@ -29,7 +33,7 @@ function search(evt) {
                     video_id = item.id.videoId;
                     const para = document.createElement("p");
                     para.innerHTML = "<a href=\"https://www.youtube.com/watch?v=" + video_id + "\">" +
-                        "<img src=\"https://img.youtube.com/vi/" + video_id + "/default.jpg\">"
+                        "<img id='videos' src=\"https://img.youtube.com/vi/" + video_id + "/default.jpg\">"
                         + "</a>";
                     result_div.appendChild(para);
                     result_div.appendChild(document.createElement("hr"));
@@ -46,12 +50,19 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 </head>
 <body>
-<form action="#">
+
+    <div class ="contenu">
+        <h1>REPAIR TAG</h1>
+   
+       <h2> Vous cherchez à réparer un appareil </h2>
+<form style="text-align: center;" action="#">
     <label for="search">recherche</label>
     <input type="text" id="search" width="30"/>
     <input type="button" value="ok" id="search_btn"/>
     <hr/>
     <div id="result"></div>
 </form>
+</div>  
+
 </body>
 </html>

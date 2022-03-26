@@ -2,6 +2,7 @@
 
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/style.css">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,8 +86,12 @@ body {
 
 <form>
 <div class="form" methode="GET" action="">
+       
 <div class="card shadow  monform">
-<h2 class=""> votre professionel adapté</h2>
+
+<h1>REPAIR TAG</h1>
+   
+   <h2> Vous cherchez à réparer un appareil </h2>
 
 
 
