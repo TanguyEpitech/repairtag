@@ -131,7 +131,7 @@ body {
 
 var activite = [];
 $.ajax({
-    url: 'https://repairtag.asso-bug.org/repairtag/activites.json',
+    url: '/repairtag/activites.json',
     type: 'POST',
     
     success: function(response) {
@@ -147,7 +147,7 @@ var tab = [];
 
 let inputs = $("input");
 $.ajax({
-    url: 'https://repairtag.asso-bug.org/repairtag/data.json',
+    url: '/repairtag/data.json',
     type: 'POST',
     
     success: function(response) {
