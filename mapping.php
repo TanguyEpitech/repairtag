@@ -25,9 +25,6 @@ crossorigin=""></script>
 
 <style>
 
-
-
-
 #map { height: 100%; margin-top: -300px; }
 
 .radios {
@@ -105,9 +102,9 @@ body {
 </select>
 
 <br>
-<button id="button-form" type="submit"  class="btn btn-primary  m-2 ">Valider</button>
+<button id="button-form" type="submit" style="width : 100%;"  class="btn btn-primary  m-2 ">Valider</button>
 </form> 
-<button id="button-form" type="submit"  class="btn btn-Warning m-2">demmander un devis </button>
+<button id="button-form" type="submit"  style="width : 100%;" class="btn btn-Warning m-2">demmander un devis </button>
 
 </div>
 
