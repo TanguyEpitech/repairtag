@@ -131,8 +131,9 @@ body {
 
 var activite = [];
 $.ajax({
-    url: 'activites.json',
-    type: 'POST',
+    url: 'activite.php',
+    type: 'GET',
+
     
     success: function(response) {
         
