@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+// ma clé, remplace-la avec la tienne
+const api_key = 'AIzaSyBb3PC5BCIQzYjCNoMqDrc0R0M84hoPNng';
+
+const api_url = 'https://www.googleapis.com/youtube/v3/search';
+
+function search(evt) {
+
+
+    // valeur à changer
+    search_text = document.getElementById("search").value;
+
+
+
+    result_div = document.getElementById("result")
+    url = api_url + '?key=' + api_key +
+        '&q=' + encodeURI(search_text);
+    result_div.innerHTML = "";
+    fetch(url)
+        .then(r => r.json())
+        .then(data => {
+            if (data.items) {
+                for (var i=0;i<data.items.length;++i) {
+                    item = data.items[i];
+                    console.log(item);
+                    video_id = item.id.videoId;
+                    const para = document.createElement("p");
+                    para.innerHTML = "<a href=\"https://www.youtube.com/watch?v=" + video_id + "\">" +
+                        "<img src=\"https://img.youtube.com/vi/" + video_id + "/default.jpg\">"
+                        + "</a>";
+                    result_div.appendChild(para);
+                    result_div.appendChild(document.createElement("hr"));
+                }
+            }
+        })
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    search_btn = document.getElementById("search_btn");
+    search_btn.addEventListener("click", search);
+}, false);
+
+</script>
+</head>
+<body>
+<form action="#">
+    <label for="search">recherche</label>
+    <input type="text" id="search" width="30"/>
+    <input type="button" value="ok" id="search_btn"/>
+    <hr/>
+    <div id="result"></div>
+</form>
+</body>
+</html>
